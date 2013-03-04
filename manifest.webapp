@@ -1,0 +1,20 @@
+{
+    "version": "10.0,
+    "name": "Where Am I",
+    "launch_path": "/index.html",
+    "description": "Where Am I allows user to send their current location via SMS or eMail.",
+    "type": "privileged",
+    "icons": {
+        "16": "/images/logo16.png",
+        "32": "/images/logo32.png",
+        "48": "/images/logo48.png",
+        "64": "/images/logo64.png",
+        "128": "/images/logo128.png"
+    },
+    "developer": {
+        "name": "Peter Wong",
+        "url": "http://petkatan.blogspot.co.nz"
+    },
+    "installs_allowed_from": ["*"],
+    "default_locale": "en"
+}
