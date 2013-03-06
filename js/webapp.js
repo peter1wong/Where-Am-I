@@ -117,13 +117,13 @@
                 data: {
                     type: "webcontacts/contact",
                     params: { // Will possibly move to be direct properties under "data"
-                        giveName: "Robert",
-                        familyName: "Nyman",
-                        tel: "+44789",
-                        email: "robert@mozilla.com",
-                        address: "San Francisco",
+                        giveName: "Peter",
+                        familyName: "Wong",
+                        tel: "+6421529577",
+                        email: "peter1wong@gmail.com",
+                        address: "Auckland",
                         note: "This is a note",
-                        company: "Mozilla"
+                        company: "Petkatan Development"
                     }
                 }
             });
@@ -138,7 +138,7 @@
                 data: {
                     //type: "url", // Possibly text/html in future versions,
                     number: 1,
-                    url: "http://robertnyman.com"
+                    url: "http://petkatan.blogspot.co.nz"
                 }
             });
         }
@@ -167,7 +167,7 @@
                 name: "view",
                 data: {
                     type: "url", // Possibly text/html in future versions
-                    url: "http://robertnyman.com"
+                    url: "http://petkatan.blogspot.co.nz"
                 }
             });
         }
@@ -192,9 +192,9 @@
                 name: "save-bookmark",
                 data: {
                     type: "url",
-                    url: "http://robertnyman.com",
-                    name: "Robert's talk",
-                    icon: "http://robertnyman.com/favicon.png"
+                    url: "http://petkatan.blogspot.co.nz",
+                    name: "Peter Wong",
+                    icon: "https://dl.dropbox.com/u/64727026/Cheapest_Icon1_173x173.png"
                  }
             });
         }
