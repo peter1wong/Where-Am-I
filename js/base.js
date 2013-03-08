@@ -11,7 +11,7 @@ if (navigator.mozApps) {
                 // alert(manifestURL);
             install.parentNode.className = "show-install";
             install.onclick = function () {
-                var installApp = navigator.mozApps.installPackage("http://peter1wong.github.com/Where-Am-I/package.manifest");
+                var installApp = navigator.mozApps.installPackage("http://localhost/Where-Am-I/package.manifest");
                 installApp.onsuccess = function(data) {
                     install.style.display = "none";
                 };
