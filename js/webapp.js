@@ -1,21 +1,19 @@
 (function () {
-    /*
-        WebActivities:
 
-            configure
-            costcontrol/balance
-            costcontrol/data_usage
-            costcontrol/telephony
-            dial
-            new (type: "websms/sms", "webcontacts/contact") (add-contact, compose-mail?)
-            open
-            pick (type: "image/png" etc)
-            record (capture?)
-            save-bookmark
-            share
-            test
-            view (type: "url" etc. "text/html"?)
-    */
+
+	/*
+    window.onload = function() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                alert('it works');
+            }, function(error) {
+                alert('Error occurred. Error code: ' + error.code);         
+            },{timeout:50000});
+        }else{
+            alert('no geolocation support');
+        }
+    };
+	*/
 
     // WebActivities
     var pickImage = document.querySelector("#pick-image");

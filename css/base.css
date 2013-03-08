@@ -1,7 +1,10 @@
+/*<link rel="stylesheet" type="text/css" href="shared/style/buttons.css">*/
+/*<link rel="stylesheet" type="text/css" href="shared/style/input_areas.css">*/
+
 html, body {
     width: 100%;
     padding: 1;
-    margin: 1;
+    margin: 0;
     background: #C0C0C0;
 }
 
@@ -17,9 +20,15 @@ header {
     z-index: 3;
 }
 
+#main textarea {
+        width: 100%;
+        min-height: 20%;
+}
+
+/*
 #main button {
         width: 50px;
-        min-height: 50px;
+        min-height: 30px;
         border: 1px solid #000;
         display: -moz-inline-stack;
         display: inline-block;
@@ -28,3 +37,4 @@ header {
         zoom: 1;
         *display: inline;
 }
+*/

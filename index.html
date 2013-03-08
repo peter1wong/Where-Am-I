@@ -20,44 +20,28 @@
 
     <div id="main">
 
-	   <table>
-	   <tr>
-		   <!-- Latitude -->
-			<div class="title">
-			<div class="label" style="color:#BDBDBD;">Latitude</div>
-			<DIV class="textEntry">
-			<textarea id="txtLatitude" placeholder=""></textarea>
-			</div>
+		<br>
+		<table>
+		<tr>
+			<!-- Latitude & Longitude -->
+			<textarea id="txtLatitudeLongitude" placeholder="Latitude, Longitude" required="" style="color:#BDBDBD;"></textarea>
 		</tr>
 		<br>
-		<tr>
-			<!-- Longitude -->
-			<div class="title">
-			<div class="label" style="color:#BDBDBD;">Longitude</div>
-			<DIV class="textEntry">
-			<textarea id="txtLongitude" placeholder=""></textarea>
-			</div>
-			</div>
-		</tr>
 		<br>
 		<tr>
 			<!-- Address -->
-			<div class="title">
-			<div class="label" style="color:#BDBDBD;">Address</div>
-			<DIV class="textEntry">
-			<textarea id="txtAddress" placeholder=""></textarea>
-			</div>
-			</div>
+			<textarea id="txtAddress" placeholder="Address" required="" style="color:#BDBDBD;"></textarea>
 		</tr>
+		<br>
+<button class="danger">Danger</button>
+<button class="longer">Longer than usual</button>
+		<button id="send-sms">SMS</button>
+		<button id="send-email">eMail</button>
+		<button id="view-location">Map</button>
 
     </div>
 
     <footer>
-        <ul>
-            <li><button id="send-sms">SMS</button></li>
-            <li><button id="send-email">eMail</button></li>
-            <li><button id="view-location">Map</button></li>
-        </ul>
     </footer>
 
     <script type="text/javascript" src="js/base.js"></script>

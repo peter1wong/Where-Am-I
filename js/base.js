@@ -11,7 +11,7 @@ if (navigator.mozApps) {
                 // alert(manifestURL);
             install.parentNode.className = "show-install";
             install.onclick = function () {
-                var installApp = navigator.mozApps.installPackage("http://localhost/Firefox-OS-Boilerplate-App/package.manifest");
+                var installApp = navigator.mozApps.installPackage("http://localhost/Where-Am-I/package.manifest");
                 installApp.onsuccess = function(data) {
                     install.style.display = "none";
                 };
@@ -24,12 +24,4 @@ if (navigator.mozApps) {
 }
 else {
     console.log("Open Web Apps not supported");
-}
-
-// Reload content
-var reload = document.querySelector("#reload");
-if (reload) {
-    reload.onclick = function () {
-        location.reload(true);
-    };
 }
