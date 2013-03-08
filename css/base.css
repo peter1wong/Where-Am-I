@@ -20,6 +20,14 @@ header {
     z-index: 3;
 }
 
+/* header #install {
+    display: none;
+    float: left;
+    margin: 0;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    height: 100%;
+} */
+
 #main textarea {
         width: 100%;
         min-height: 20%;
