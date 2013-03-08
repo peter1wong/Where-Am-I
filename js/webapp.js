@@ -88,7 +88,7 @@
             var call = new MozActivity({
                 name: "dial",
                 data: {
-                    number: "+46777888999"
+                    number: "+6421529577"
                 }
             });
         }
@@ -101,7 +101,7 @@
                 name: "new", // Possible compose-sms in future versions
                 data: {
                     type: "websms/sms",
-                    number: "+46777888999"
+                    number: "+6421529577"
                 }
             });
         }
