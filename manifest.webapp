@@ -1,7 +1,7 @@
 {
     "version": "1.0",
     "name": "Where Am I",
-    "launch_path": "/Where-Am-I/index.html",
+    "launch_path": "/index.html",
     "description": "Where Am I allows user to send their current location via SMS or eMail.",
     "icons": {
         "16": "/Where-Am-I/images/logo16.png",
