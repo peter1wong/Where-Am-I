@@ -3,7 +3,6 @@
     "name": "Where Am I",
     "launch_path": "/index.html",
     "description": "Where Am I allows user to send their current location via SMS or eMail.",
-    "type": "privileged",
     "icons": {
         "16": "/images/logo16.png",
         "32": "/images/logo32.png",
