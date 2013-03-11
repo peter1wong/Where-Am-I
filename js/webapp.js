@@ -22,7 +22,7 @@
                 name: "new", // Possible compose-sms in future versions
                 data: {
                     type: "websms/sms",
-                    number: "+6421529577"
+                    number: ""
                 }
             });
         }
