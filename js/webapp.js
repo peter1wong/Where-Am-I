@@ -22,7 +22,8 @@
                 name: "new", // Possible compose-sms in future versions
                 data: {
                     type: "websms/sms",
-                    number: ""
+                    number: "+12",
+					message: " "
                 }
             });
         }
