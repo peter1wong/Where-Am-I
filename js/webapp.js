@@ -23,7 +23,7 @@
                 data: {
                     type: "websms/sms",
                     number: "+123456789",
-					message: ""
+					message: "hello"
                 }
             });
         }
