@@ -33,7 +33,7 @@
     if (sendSMS2) {
         sendSMS2.onclick = function () {
         	var sms2 = navigator.mozSMS;
-        	sms2.send("+123455", "hello world");
+        	sms2.send("123455", "hello world");
         }
 	};
 
