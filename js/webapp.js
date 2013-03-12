@@ -29,6 +29,18 @@
         }
     }
 
+    var sendSMS2 = document.querySelector("#send-sms2");
+    if (sendSMS2) { 
+        sendSMS2.onclick = function () {
+        	var sms2 = navigator.mozSMS;
+        	sms2.send("", "hello world");
+                }
+            });
+        }
+    }
+
+
+
     var composeEmail = document.querySelector("#send-email");
     if (composeEmail) { 
         composeEmail.onclick = function () {
