@@ -22,23 +22,8 @@
                 name: "new", // Possible compose-sms in future versions
                 data: {
                     type: "websms/sms",
-                    number: "+98765321",
+                    number: "+6868686868",
 					message: "hello"
-                }
-            });
-        }
-    }
-
-
-    var share = document.querySelector("#share");
-    if (share) { 
-        share.onclick = function () {
-            var sharing = new MozActivity({
-                name: "share",
-                data: {
-                    //type: "url", // Possibly text/html in future versions,
-                    number: 1,
-                    url: "http://petkatan.blogspot.co.nz"
                 }
             });
         }
@@ -55,5 +40,20 @@
             });
         }
     }
+
+    var share = document.querySelector("#share");
+    if (share) { 
+        share.onclick = function () {
+            var sharing = new MozActivity({
+                name: "share",
+                data: {
+                    //type: "url", // Possibly text/html in future versions,
+                    number: 1,
+                    url: "http://petkatan.blogspot.co.nz"
+                }
+            });
+        }
+    }
+
 
 })(); 
