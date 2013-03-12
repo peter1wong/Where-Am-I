@@ -22,7 +22,7 @@
                 name: "new", // Possible compose-sms in future versions
                 data: {
                     type: "websms/sms",
-                    number: "+123456789",
+                    number: "+98765321",
 					message: "hello"
                 }
             });
