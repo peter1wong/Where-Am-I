@@ -69,8 +69,18 @@ else {
     var sendSMS2 = document.querySelector("#send-sms2");
     if (sendSMS2) {
         sendSMS2.onclick = function () {
-        	var sms2 = navigator.mozSMS;
-        	sms2.send("123455", "hello world");
+        /*	var sms2 = navigator.mozSMS;
+        	sms2.send("123455", "hello world");*/
+        	
+        	
+           var sms = new MozActivity({
+                name: "new", // Possible compose-sms in future versions
+                data: {
+                    type: "websms/sms",
+                    number: "+222",
+					message: "helsuperlo"
+                }
+            })        	
         }
 	};
 
