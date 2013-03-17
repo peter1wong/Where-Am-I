@@ -48,7 +48,7 @@ else {
 		    navigator.geolocation.getCurrentPosition(function(position) {
 		        var latitude = position.coords.latitude;
 		        var longitude = position.coords.longitude;
-		        /*document.getElementById("out").innerHTML = "Latitude is "+latitude+", longitude is "+longitude+"<br /><br />";*/
+		        document.getElementById("txtLatitudeLongitude").innerHTML = latitude+", "+longitude;
 		        alert(latitude + ', ' + longitude);
 		  
 		        /*var myImage = new Image;
