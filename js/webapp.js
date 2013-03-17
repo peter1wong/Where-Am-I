@@ -45,12 +45,13 @@ else {
 	        if (navigator.geolocation) {
 	            navigator.geolocation.getCurrentPosition(function(position) {
 	                /*alert('it works')*/
-	                var coords = position.coords;
-	                alert(position.coords.latitude + ', ' + position.coords.longitute);
-	                alert(position.coords.longitute);
+	                var geolocation = position.coords;
+	                /*alert(position.coords.latitude + ', ' + position.coords.longitude);
+	                alert(position.coords.longitude);*/
+	                alert(geolocation.longitude);
 	                /*alert(coords.latitude, coords.longitute, coord.accuracy);*/
 	            }, function(error) {
-	                alert('Error occurred. Error code: ' + error.code);         
+	                alert('Error occurred. Error code: ' + error.code);
 	            },{timeout:50000});
 	        }else{
 	            alert('no geolocation support');
