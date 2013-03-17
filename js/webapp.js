@@ -37,30 +37,6 @@ else {
 
 (function () {
 
-    var wai = document.querySelector("#wai");
-    if (wai) {
-        wai.onclick = function () {
-	        if (navigator.geolocation) {
-	            navigator.geolocation.getCurrentPosition(function(position) {
-	                /*alert('it works')*/
-	                var geolocation = position.coords;
-	                alert(position.coords.latitude + ', ' + geolocation.longitude);
-	                	/*+ ' - Alt:' + geolocation.altitude + */
-	                	/*' Accu:' + geolocation.accuracy + ' H:' + geolocation.heading + ' S:' + geolocation.speed);*/
-	            }, function(error) {
-	                alert('Error occurred. Error code: ' + error.code);
-	                /*var errorcode = {
-	                	1: 'Permission denied',
-	                	2: 'Position is not available',
-	                	3: 'Request timeout';
-	                alert(errorcode[error.code] + ' - cannot determine your position');*/
-	                }
-	            },{timeout:50000});
-	        }else{
-	            alert('no geolocation support');
-	        }
- 		}
-	}	
 
 
 	
@@ -78,6 +54,7 @@ else {
             });
         }
     }
+    
 
     var sendSMS2 = document.querySelector("#send-sms2");
     if (sendSMS2) {
@@ -93,7 +70,7 @@ else {
                     number: "+222",
 					message: "helsuperlo"
                 }
-            })        	
+            });
         }
 	}
 
