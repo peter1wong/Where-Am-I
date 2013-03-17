@@ -57,7 +57,7 @@ else {
 	                	3: 'Request timeout';
 	                alert(errorcode[error.code] + ' - cannot determine your position');*/
 	                }
-	            },{enableHighAccuracy: true, timeout:50000, maximumAge: 0});
+	            },{timeout:50000 /*enableHighAccuracy: true, , maximumAge: 0*/});
 	        }else{
 	            alert('no geolocation support');
 	        }
