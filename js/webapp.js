@@ -49,7 +49,7 @@ else {
 		        var latitude = position.coords.latitude;
 		        var longitude = position.coords.longitude;
 		        document.getElementById("txtLatitudeLongitude").innerHTML = latitude+", "+longitude;
-		        alert(latitude + ', ' + longitude);
+		        /*alert(latitude + ', ' + longitude);*/
 		  
 		        /*var myImage = new Image;
 		        myImage.src = "http://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&zoom=10&size=300x300&sensor=false";
