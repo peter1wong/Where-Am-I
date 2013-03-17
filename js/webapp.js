@@ -44,7 +44,9 @@ else {
         wai.onclick = function () {
 	        if (navigator.geolocation) {
 	            navigator.geolocation.getCurrentPosition(function(position) {
-	                alert('it works');
+	                /*alert('it works')*/
+	                var coords = position.coords;
+	                showMap(coords.latitude, coords.longitute, coord.accuracy);
 	            }, function(error) {
 	                alert('Error occurred. Error code: ' + error.code);         
 	            },{timeout:50000});
