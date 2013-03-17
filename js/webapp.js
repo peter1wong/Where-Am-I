@@ -38,6 +38,27 @@ else {
 (function () {
 
 
+    var wai = document.querySelector("#wai");
+    if (wai) { 
+        wai.onclick = function () {
+		    if (!navigator.geolocation){
+		        alert('Geolocation is not supported by your browser');
+		        return;
+		    }
+		    navigator.geolocation.getCurrentPosition(function(position) {
+		        var latitude = position.coords.latitude;
+		        var longitude = position.coords.longitude;
+		        /*document.getElementById("out").innerHTML = "Latitude is "+latitude+", longitude is "+longitude+"<br /><br />";*/
+		        alert(latitude + ', ' + longitude);
+		  
+		        /*var myImage = new Image;
+		        myImage.src = "http://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&zoom=10&size=300x300&sensor=false";
+		        document.getElementById('out').appendChild(myImage);
+		        myImage.align = "";*/
+		    });
+        }
+    }
+
 
 	
 
