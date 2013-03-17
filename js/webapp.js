@@ -46,11 +46,18 @@ else {
 	            navigator.geolocation.getCurrentPosition(function(position) {
 	                /*alert('it works')*/
 	                var geolocation = position.coords;
-	                alert(position.coords.latitude + ', ' + geolocation.longitude);
+	                alert(position.coords.latitude + ', ' + geolocation.longitude + ' - Alt:' + geolocation.altitude + 
+	                	' Accu:' + geolocation.accuracy + ' H:' + geolocation.heading + ' S:' + geolocation.speed);
 	                /*alert(coords.latitude, coords.longitute, coord.accuracy);*/
 	            }, function(error) {
-	                alert('Error occurred. Error code: ' + error.code);
-	            },{timeout:50000});
+	                /*alert('Error occurred. Error code: ' + error.code);*/
+	                var errorcode = {
+	                	1: 'Permission denied',
+	                	2: 'Position is not available',
+	                	3: 'Request timeout';
+	                alert(errorcode[error.code] + ' - cannot determine your position');
+	                }
+	            },{enableHighAccuracy: true, timeout:50000, maximumAge: 0});
 	        }else{
 	            alert('no geolocation support');
 	        }
