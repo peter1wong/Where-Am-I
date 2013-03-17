@@ -15,5 +15,11 @@
         "url": "http://petkatan.blogspot.co.nz"
     },
     "installs_allowed_from": ["*"],
-    "default_locale": "en"
+    "default_locale": "en",
+    "permissions": {
+      "geolocation": {
+        "description": "Required for geolocation",
+        "access": "none"
+        }
+    }
 }
