@@ -48,7 +48,7 @@ else {
 	                var geolocation = position.coords;
 	                /*alert(position.coords.latitude + ', ' + geolocation.longitude + ' - Alt:' + geolocation.altitude + 
 	                	' Accu:' + geolocation.accuracy + ' H:' + geolocation.heading + ' S:' + geolocation.speed);*/
-	                alert(coords.latitude, coords.longitute, coord.accuracy);
+	                alert(geolocation.latitude + ', ' + geolocation.longitude);
 	            }, function(error) {
 	                alert('Error occurred. Error code: ' + error.code);
 	                /*var errorcode = {
