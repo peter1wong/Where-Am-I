@@ -58,6 +58,8 @@ else {
 		        myImage.src = "http://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&zoom=10&size=300x300&sensor=false";
 		        document.getElementById('out').appendChild(myImage);
 		        myImage.align = "";*/
+		    },function(error) {
+		    	alert('cannot get your location');
 		    });
         }
     }
