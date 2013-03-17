@@ -59,7 +59,12 @@ else {
 		        document.getElementById('out').appendChild(myImage);
 		        myImage.align = "";*/
 		    },function(error) {
-		    	alert('cannot get your location');
+		    	var errorcode = {
+		    		1: 'Permission denied',
+		    		2: 'Position not available',
+		    		3: 'Request timeout'
+		    	};
+		    	document.getElementById("txtLatitudeLongitude").innerHTML = errorcode[error.code] + "Cannot get position"
 		    },{
 		    	enableHighAccuracy: true,
 		    	timeout: 2000,
