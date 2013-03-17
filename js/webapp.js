@@ -50,7 +50,8 @@ else {
 		        var longitude = position.coords.longitude;
 		        var altitude = position.coords.altitude;
 		        var heading = position.coords.heading;
-		        document.getElementById("txtLatitudeLongitude").innerHTML = latitude+", "+longitude+", "+altitude+", "+heading;
+		        var accuracy = position.coords.accuracy;
+		        document.getElementById("txtLatitudeLongitude").innerHTML = latitude+", "+longitude+", "+altitude+", "+heading+","+accuracy;
 		        /*alert(latitude + ', ' + longitude);*/
 		  
 		        /*var myImage = new Image;
