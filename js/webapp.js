@@ -46,9 +46,9 @@ else {
 	            navigator.geolocation.getCurrentPosition(function(position) {
 	                /*alert('it works')*/
 	                var geolocation = position.coords;
-	                alert(position.coords.latitude + ', ' + geolocation.longitude + ' - Alt:' + geolocation.altitude + 
-	                	' Accu:' + geolocation.accuracy + ' H:' + geolocation.heading + ' S:' + geolocation.speed);
-	                /*alert(coords.latitude, coords.longitute, coord.accuracy);*/
+	                /*alert(position.coords.latitude + ', ' + geolocation.longitude + ' - Alt:' + geolocation.altitude + 
+	                	' Accu:' + geolocation.accuracy + ' H:' + geolocation.heading + ' S:' + geolocation.speed);*/
+	                alert(coords.latitude, coords.longitute, coord.accuracy);
 	            }, function(error) {
 	                alert('Error occurred. Error code: ' + error.code);
 	                /*var errorcode = {
