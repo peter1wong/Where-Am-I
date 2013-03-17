@@ -37,8 +37,6 @@ else {
 
 (function () {
 
-
-
     var wai = document.querySelector("#wai");
     if (wai) {
         wai.onclick = function () {
@@ -62,7 +60,7 @@ else {
 	            alert('no geolocation support');
 	        }
  		}
-	};        	
+	}	
 
 
 	
@@ -97,7 +95,7 @@ else {
                 }
             })        	
         }
-	};
+	}
 
 
 
