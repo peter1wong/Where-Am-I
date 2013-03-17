@@ -60,6 +60,10 @@ else {
 		        myImage.align = "";*/
 		    },function(error) {
 		    	alert('cannot get your location');
+		    },{
+		    	enableHighAccuracy: true,
+		    	timeout: 2000,
+		    	maximumAge: 0
 		    });
         }
     }
