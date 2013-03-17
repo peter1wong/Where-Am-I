@@ -38,19 +38,24 @@ else {
 (function () {
 
 
-	/*
-    window.onload = function() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                alert('it works');
-            }, function(error) {
-                alert('Error occurred. Error code: ' + error.code);         
-            },{timeout:50000});
-        }else{
-            alert('no geolocation support');
-        }
-    };
-	*/
+
+    var wai = document.querySelector("#wai");
+    if (wai) {
+        wai.onclick = function () {
+	        if (navigator.geolocation) {
+	            navigator.geolocation.getCurrentPosition(function(position) {
+	                alert('it works');
+	            }, function(error) {
+	                alert('Error occurred. Error code: ' + error.code);         
+	            },{timeout:50000});
+	        }else{
+	            alert('no geolocation support');
+	        }
+ 		}
+	};        	
+
+
+	
 
     var sendSMS = document.querySelector("#send-sms");
     if (sendSMS) { 
