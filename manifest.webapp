@@ -15,11 +15,11 @@
         "url": "http://petkatan.blogspot.co.nz"
     },
     "installs_allowed_from": ["*"],
+    "appcache_path": "/Where-Am-I/manifest.appcache",
     "default_locale": "en",
     "permissions": {
       "geolocation": {
-        "description": "Required for geolocation",
-        "access": "none"
+        "description": "Required for geolocation"
         }
     }
 }
