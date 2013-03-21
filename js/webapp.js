@@ -67,7 +67,7 @@ else {
 		    	document.getElementById("txtLatitudeLongitude").innerHTML = errorcode[error.code] + "Cannot get position"
 		    },{
 		    	enableHighAccuracy: true,
-		    	timeout: 2000,
+		    	timeout: 50000,
 		    	maximumAge: 0
 		    });
         }
