@@ -48,18 +48,18 @@ else {
 		        return;
 		    }
 		    navigator.geolocation.getCurrentPosition(function(position) {
-		        var latitude = position.coords.latitude;
-		        var longitude = position.coords.longitude;
-		        var altitude = position.coords.altitude;
-		        var heading = position.coords.heading;
-		        var accuracy = position.coords.accuracy;
+		        var latitude1 = position.coords.latitude;
+		        var longitude1 = position.coords.longitude;
+		        var altitude1 = position.coords.altitude;
+		        var heading1 = position.coords.heading;
+		        var accuracy1 = position.coords.accuracy;
 		        
 				nokia.places.search.manager.reverseGeoCode({
 					latitude: position.coords.latitude,
 					longitude: position.coords.longitude,
 					onComplete: processResults
 				});
-				document.getElementById("txtLatitudeLongitude").innerHTML = latitude+", "+longitude+", "+altitude+", "+heading+","+accuracy;
+				document.getElementById("txtLatitudeLongitude").innerHTML = latitude1+", "+longitude1+", "+altitude1+", "+heading1+","+accuracy1;
 		        /*alert(latitude + ', ' + longitude);*/
 		  
 		        /*var myImage = new Image;
@@ -145,43 +145,47 @@ else {
     }
 
 
+
+	function processResults(data, requestStatus, requestId)  {
+		var addressDetails ="";
+		if(requestStatus == "ERROR")  {
+			alert("Rev Geocoding failure");
+		} else if (requestStatus == "OK") {
+			var	address = data.location.address;
+			if (address.street) {
+				addressDetails = addressDetails +" , "+ address.street;						
+			}
+			if (address.houseNumber) {
+				addressDetails = addressDetails +" , "+ address.houseNumber;
+			}						
+			if (address.city) {
+				addressDetails = addressDetails +" , "+ address.city;
+			}
+			if (address.district) {
+				addressDetails = addressDetails +" , "+ address.district;
+			}						
+			if (address.postalCode) {
+				addressDetails = addressDetails +" , "+ address.postalCode;
+			}						
+			if (address.state) {
+				addressDetails = addressDetails +" , "+ address.state ;
+			}
+			if (address.county) {
+				addressDetails = addressDetails +" , "+ address.county;
+			}
+			if (address.country) {
+				addressDetails = addressDetails +" , "+ address.country;
+			}
+		
+			document.getElementById("txtAddress").innerHTML = addressDetails;
+		}
+	}
+
+
+
 })(); 
 
 
-function processResults(data, requestStatus, requestId)  {
-	var addressDetails ="";
-	if(requestStatus == "ERROR")  {
-		alert("Rev Geocoding failure");
-	} else if (requestStatus == "OK") {
-		var	address = data.location.address;
-		if (address.street) {
-			addressDetails = addressDetails +" , "+ address.street;						
-		}
-		if (address.houseNumber) {
-			addressDetails = addressDetails +" , "+ address.houseNumber;
-		}						
-		if (address.city) {
-			addressDetails = addressDetails +" , "+ address.city;
-		}
-		if (address.district) {
-			addressDetails = addressDetails +" , "+ address.district;
-		}						
-		if (address.postalCode) {
-			addressDetails = addressDetails +" , "+ address.postalCode;
-		}						
-		if (address.state) {
-			addressDetails = addressDetails +" , "+ address.state ;
-		}
-		if (address.county) {
-			addressDetails = addressDetails +" , "+ address.county;
-		}
-		if (address.country) {
-			addressDetails = addressDetails +" , "+ address.country;
-		}
-	
-		document.getElementById("txtAddress").innerHTML = addressDetails;
-	}
-}
 
 
 
