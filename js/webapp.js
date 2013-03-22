@@ -38,6 +38,8 @@ else {
 
 (function () {
 
+	nokia.Settings.set("appId", "jsUVAhQlX3l33gNikHmI");
+	nokia.Settings.set("authenticationToken","nWxKggej740Q90VgJDmDOQ");
     var wai = document.querySelector("#wai");
     if (wai) { 
         wai.onclick = function () {
@@ -51,7 +53,13 @@ else {
 		        var altitude = position.coords.altitude;
 		        var heading = position.coords.heading;
 		        var accuracy = position.coords.accuracy;
-		        document.getElementById("txtLatitudeLongitude").innerHTML = latitude+", "+longitude+", "+altitude+", "+heading+","+accuracy;
+		        
+				nokia.places.search.manager.reverseGeoCode({
+					latitude: position.coords.latitude,
+					longitude: position.coords.longitude,
+					onComplete: processResults
+				});
+				document.getElementById("txtLatitudeLongitude").innerHTML = latitude+", "+longitude+", "+altitude+", "+heading+","+accuracy;
 		        /*alert(latitude + ', ' + longitude);*/
 		  
 		        /*var myImage = new Image;
@@ -138,6 +146,42 @@ else {
 
 
 })(); 
+
+
+function processResults(data, requestStatus, requestId)  {
+	var addressDetails ="";
+	if(requestStatus == "ERROR")  {
+		alert("Rev Geocoding failure");
+	} else if (requestStatus == "OK") {
+		var	address = data.location.address;
+		if (address.street) {
+			addressDetails = addressDetails +" , "+ address.street;						
+		}
+		if (address.houseNumber) {
+			addressDetails = addressDetails +" , "+ address.houseNumber;
+		}						
+		if (address.city) {
+			addressDetails = addressDetails +" , "+ address.city;
+		}
+		if (address.district) {
+			addressDetails = addressDetails +" , "+ address.district;
+		}						
+		if (address.postalCode) {
+			addressDetails = addressDetails +" , "+ address.postalCode;
+		}						
+		if (address.state) {
+			addressDetails = addressDetails +" , "+ address.state ;
+		}
+		if (address.county) {
+			addressDetails = addressDetails +" , "+ address.county;
+		}
+		if (address.country) {
+			addressDetails = addressDetails +" , "+ address.country;
+		}
+	
+		document.getElementById("txtAddress").innerHTML = addressDetails;
+	}
+}
 
 
 
