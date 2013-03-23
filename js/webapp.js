@@ -45,6 +45,7 @@ else {
 		        alert('Geolocation is not supported by your browser');
 		        return;
 		    }
+		    process-lah();
 		    navigator.geolocation.getCurrentPosition(function(position) {
 		        var latitude = position.coords.latitude;
 		        var longitude = position.coords.longitude;
@@ -72,7 +73,9 @@ else {
         }
     }
 
-
+	function process-lah(){
+		alert("testing");
+	}
 
 
     var sendSMS = document.querySelector("#send-sms");
