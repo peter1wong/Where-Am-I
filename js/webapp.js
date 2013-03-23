@@ -53,13 +53,13 @@ else {
 		        var altitude1 = position.coords.altitude;
 		        var heading1 = position.coords.heading;
 		        var accuracy1 = position.coords.accuracy;
+				document.getElementById("txtLatitudeLongitude").innerHTML = latitude1+", "+longitude1+", "+altitude1+", "+heading1+","+accuracy1;
 		        
-				nokia.places.search.manager.reverseGeoCode({
+				/*nokia.places.search.manager.reverseGeoCode({
 					latitude: position.coords.latitude,
 					longitude: position.coords.longitude,
 					onComplete: processResults
-				});
-				document.getElementById("txtLatitudeLongitude").innerHTML = latitude1+", "+longitude1+", "+altitude1+", "+heading1+","+accuracy1;
+				});*/
 		        /*alert(latitude + ', ' + longitude);*/
 		  
 		        /*var myImage = new Image;
