@@ -146,7 +146,7 @@ else {
 
 
 
-	function processResults(data, requestStatus, requestId)  {
+	/*function processResults(data, requestStatus, requestId)  {
 		alert("Hello");
 		var addressDetails ="";
 		if(requestStatus == "ERROR")  {
@@ -180,7 +180,7 @@ else {
 		
 			document.getElementById("txtAddress").innerHTML = addressDetails;
 		}
-	}
+	}*/
 
 
 
