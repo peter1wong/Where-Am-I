@@ -38,8 +38,6 @@ else {
 
 (function () {
 
-	nokia.Settings.set("appId", "jsUVAhQlX3l33gNikHmI");
-	nokia.Settings.set("authenticationToken","nWxKggej740Q90VgJDmDOQ");
     var wai = document.querySelector("#wai");
     if (wai) { 
         wai.onclick = function () {
@@ -47,24 +45,15 @@ else {
 		        alert('Geolocation is not supported by your browser');
 		        return;
 		    }
-		    
-		    alert("heh dude");
-		    
 		    navigator.geolocation.getCurrentPosition(function(position) {
-		        var latitude1 = position.coords.latitude;
-		        var longitude1 = position.coords.longitude;
-		        var altitude1 = position.coords.altitude;
-		        var heading1 = position.coords.heading;
-		        var accuracy1 = position.coords.accuracy;
-				document.getElementById("txtLatitudeLongitude").innerHTML = latitude1+", "+longitude1+", "+altitude1+", "+heading1+","+accuracy1;
-		        
-				/*nokia.places.search.manager.reverseGeoCode({
-					latitude: position.coords.latitude,
-					longitude: position.coords.longitude,
-					onComplete: processResults
-				});*/
+		        var latitude = position.coords.latitude;
+		        var longitude = position.coords.longitude;
+		        var altitude = position.coords.altitude;
+		        var heading = position.coords.heading;
+		        var accuracy = position.coords.accuracy;
+		        document.getElementById("txtLatitudeLongitude").innerHTML = latitude+", "+longitude+", "+altitude+", "+heading+","+accuracy;
 		        /*alert(latitude + ', ' + longitude);*/
-		  
+
 		        /*var myImage = new Image;
 		        myImage.src = "http://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&zoom=10&size=300x300&sensor=false";
 		        document.getElementById('out').appendChild(myImage);
@@ -84,7 +73,7 @@ else {
     }
 
 
-	
+
 
     var sendSMS = document.querySelector("#send-sms");
     if (sendSMS) { 
@@ -148,48 +137,4 @@ else {
     }
 
 
-
-	/*function processResults(data, requestStatus, requestId)  {
-		alert("Hello");
-		var addressDetails ="";
-		if(requestStatus == "ERROR")  {
-			alert("Rev Geocoding failure");
-		} else if (requestStatus == "OK") {
-			var	address = data.location.address;
-			if (address.street) {
-				addressDetails = addressDetails +" , "+ address.street;						
-			}
-			if (address.houseNumber) {
-				addressDetails = addressDetails +" , "+ address.houseNumber;
-			}						
-			if (address.city) {
-				addressDetails = addressDetails +" , "+ address.city;
-			}
-			if (address.district) {
-				addressDetails = addressDetails +" , "+ address.district;
-			}						
-			if (address.postalCode) {
-				addressDetails = addressDetails +" , "+ address.postalCode;
-			}						
-			if (address.state) {
-				addressDetails = addressDetails +" , "+ address.state ;
-			}
-			if (address.county) {
-				addressDetails = addressDetails +" , "+ address.county;
-			}
-			if (address.country) {
-				addressDetails = addressDetails +" , "+ address.country;
-			}
-		
-			document.getElementById("txtAddress").innerHTML = addressDetails;
-		}
-	}*/
-
-
-
 })(); 
-
-
-
-
-
