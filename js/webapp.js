@@ -46,7 +46,7 @@ else {
 		        return;
 		    }
 		    
-		    alert("going in");
+		    //alert("going in");
 		    process();
 		    navigator.geolocation.getCurrentPosition(function(position) {
 		        var latitude = position.coords.latitude;
@@ -142,7 +142,7 @@ else {
 
 })(); 
 
-	function process(){
-		alert("testing");
-	}
+function process(){
+	alert("testing");
+}
 	
