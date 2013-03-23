@@ -147,6 +147,7 @@ else {
 
 
 	function processResults(data, requestStatus, requestId)  {
+		alert("Hello");
 		var addressDetails ="";
 		if(requestStatus == "ERROR")  {
 			alert("Rev Geocoding failure");
