@@ -47,6 +47,9 @@ else {
 		        alert('Geolocation is not supported by your browser');
 		        return;
 		    }
+		    
+		    alert("heh dude");
+		    
 		    navigator.geolocation.getCurrentPosition(function(position) {
 		        var latitude1 = position.coords.latitude;
 		        var longitude1 = position.coords.longitude;
