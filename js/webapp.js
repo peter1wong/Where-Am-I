@@ -73,9 +73,7 @@ else {
         }
     }
 
-	function process-lah(){
-		alert("testing");
-	}
+
 
 
     var sendSMS = document.querySelector("#send-sms");
@@ -141,3 +139,8 @@ else {
 
 
 })(); 
+
+	function process-lah(){
+		alert("testing");
+	}
+	
