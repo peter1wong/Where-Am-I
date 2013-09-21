@@ -105,7 +105,7 @@ else {
                 data: {
                     type: "websms/sms",
                     number: "+222",
-					message: "helsuperlo"
+					body: "helsuperlo"
                 }
             });
         }
