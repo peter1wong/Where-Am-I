@@ -99,7 +99,7 @@ else {
         /*	var sms2 = navigator.mozSMS;
         	sms2.send("123455", "hello world");*/
         	
-        	msg=document.getElementById("txtLatitudeLongitude").value;
+			var msg=document.getElementById("txtLatitudeLongitude").value;
         	
            var sms = new MozActivity({
                 name: "new", // Possible compose-sms in future versions
