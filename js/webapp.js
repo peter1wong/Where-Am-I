@@ -99,13 +99,13 @@ else {
         /*	var sms2 = navigator.mozSMS;
         	sms2.send("123455", "hello world");*/
         	
+        	msg=document.getElementById("txtLatitudeLongitude").value;
         	
            var sms = new MozActivity({
                 name: "new", // Possible compose-sms in future versions
                 data: {
-                    type: "websms/sms",
-                    number: "+222",
-					body: "peter was here"
+                    type: "88",
+					body: msg
                 }
             });
         }
