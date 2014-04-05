@@ -1,25 +1,38 @@
 {
-    "version": "1.0",
-    "name": "Where Am I",
-    "launch_path": "/Where-Am-I/index.html",
-    "description": "Where Am I allows user to send their current location via SMS or eMail.",
-    "icons": {
-        "16": "/Where-Am-I/images/logo16.png",
-        "32": "/Where-Am-I/images/logo32.png",
-        "48": "/Where-Am-I/images/logo48.png",
-        "64": "/Where-Am-I/images/logo64.png",
-        "128": "/Where-Am-I/images/logo128.png"
-    },
-    "developer": {
-        "name": "Peter Wong",
-        "url": "http://petkatan.blogspot.co.nz"
-    },
+	"name": "Where Am I",
+	"version": "1.0",
+	"description": "Where Am I tells your current location via SMS and email",
+	"launch_path": "/index.html",
+	"icons": {
+		"16": "/style/icons/icon_16.png",
+		"30": "/style/icons/icon_30.png",
+		"32": "/style/icons/icon_32.png",
+		"48": "/style/icons/icon_48.png",
+		"60": "/style/icons/icon_60.png",
+		"90": "/style/icons/icon_90.png",
+		"120": "/style/icons/icon_120.png",
+		"128": "/style/icons/icon_128.png",
+		"256": "/style/icons/icon_256.png"
+	},
+	"developer": {
+		"name": "Peter Wong",
+		"url": "http://petkatan.blogspot.co.nz/"
+	},
     "installs_allowed_from": ["*"],
-    "appcache_path": "/Where-Am-I/manifest.appcache",
-    "default_locale": "en",
-    "permissions": {
-      "geolocation": {
-        "description": "Required for geolocation"
-        }
-    }
+	"default_locale": "en",
+	
+	"permissions": {
+		"geolocation": {
+			"description": "Required for geolocation"
+		},
+		"contacts": {
+			"description": "Required for autocompletion in the share screen",
+			"access": "readcreate"
+		},
+		"sms": {
+			"description": "Populate address"
+		}
+	},
+	
+	"type": "privileged"
 }
